@@ -6,6 +6,10 @@
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
 	<string>JobmaTask</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Need access to upload photo</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Capture Photo</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
