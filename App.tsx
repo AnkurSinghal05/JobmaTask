@@ -8,6 +8,7 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Image,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -24,6 +25,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import { personalAssets } from './src/assets/images';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -72,6 +74,7 @@ function App(): React.JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
+        <Image source={personalAssets.phone}/>
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
