@@ -21,7 +21,7 @@ const FormInput: React.FC<FormInputProps> = ({ placeholder, value, onChange, onB
         resizeMode="contain"
       />}
       <TextInput
-        style={{ padding: 0 }}
+        style={{ padding: 0, flex:1 }}
         placeholder={placeholder}
         value={value}
         keyboardType={keyboardType}
