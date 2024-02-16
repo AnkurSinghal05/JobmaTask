@@ -1,6 +1,6 @@
-import {yupResolver} from '@hookform/resolvers/yup';
-import React, {useState} from 'react';
-import {Controller, SubmitHandler, useForm} from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import React, { useState } from 'react';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import {
   Image,
   Pressable,
@@ -9,12 +9,12 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from 'react-native';
 import ImageCropPicker from 'react-native-image-crop-picker';
 import LinearGradient from 'react-native-linear-gradient';
 import * as yup from 'yup';
-import {personalAssets} from '../../assets/images';
+import { personalAssets } from '../../assets/images';
 import FormInput from '../../components/FormInput';
 import Stepper from '../../components/Stepper';
 
@@ -80,7 +80,6 @@ const PersonalInfoScreen = () => {
     });
   };
   const selectedImage = watch('image');
-  console.log(selectedImage);
 
   return (
     <>
@@ -100,6 +99,7 @@ const PersonalInfoScreen = () => {
 
       <View style={{flex: 1}}>
         <ScrollView
+          showsVerticalScrollIndicator={false}
           style={styles.scroll}
           contentContainerStyle={{paddingBottom: 60}}>
           <Text style={styles.heading}>Personal Info</Text>
@@ -108,7 +108,7 @@ const PersonalInfoScreen = () => {
               flexDirection: 'row',
               gap: 20,
               alignItems: 'center',
-              marginBottom: 20,
+              marginBottom: 0,
             }}>
             {selectedImage ? (
               <TouchableOpacity onPress={()=>setValue('image','')}>
@@ -126,7 +126,7 @@ const PersonalInfoScreen = () => {
                 </TouchableOpacity>
                 <Text
                   style={{fontSize: 16, fontWeight: 'bold', color: '#2A2E49'}}>
-                  Add profile image {selectedImage}
+                  Add profile image
                 </Text>
               </>
             )}
